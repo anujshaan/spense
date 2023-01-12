@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Roboto',sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo{
+  background-image: linear-gradient(108deg, #b16cea 8%, #ff5e69 40%, #ff8a56 77%, #ffa84b 91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer components{
+  .inputButton{
+    @apply bg-white flex items-center justify-center px-5 py-2 space-x-3 font-semibold cursor-pointer;
+  }
+  .hotelImgWrapper{
+    @apply bg-black h-[200px] rounded-lg;
+  }
+  .hotelImg{
+    @apply w-full h-full object-cover rounded-lg opacity-75;
+  }
+  .services{
+    @apply flex items-center justify-center space-x-2;
+  }
 }
